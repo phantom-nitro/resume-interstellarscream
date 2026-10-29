@@ -24,7 +24,7 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        Full Stack LLM Development Senior Analyst with 4+ years of experience designing
+        Full Stack LLM Development Senior Analyst with <span id="years-experience">5</span>+ years of experience designing
         and building scalable applications, APIs, data-driven systems, and production-grade
         AI solutions. Specialized in LLM orchestration, agentic AI workflows, advanced
         retrieval-augmented generation (RAG), conversational AI, summarization, sentiment
@@ -103,5 +103,16 @@
   <footer class="site-footer">
     <p>&copy; 2026 Dharanidaran R B</p>
   </footer>
+
+  <script>
+    var start = new Date("2021-08-01");
+    var now = new Date();
+    var years = now.getFullYear() - start.getFullYear();
+    var anniversaryPassed =
+      now.getMonth() > start.getMonth() ||
+      (now.getMonth() === start.getMonth() && now.getDate() >= start.getDate());
+    if (!anniversaryPassed) years -= 1;
+    document.getElementById("years-experience").textContent = years;
+  </script>
 </body>
 </html>
