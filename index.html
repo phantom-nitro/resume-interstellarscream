@@ -99,7 +99,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Dharanidaran Rajangam Balaraman</p>
+    <p>&copy; <span id="year">2026</span> Dharanidaran Rajangam Balaraman</p>
   </footer>
 
   <script>
@@ -111,6 +111,7 @@
       (now.getMonth() === start.getMonth() && now.getDate() >= start.getDate());
     if (!anniversaryPassed) years -= 1;
     document.getElementById("years-experience").textContent = years;
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
